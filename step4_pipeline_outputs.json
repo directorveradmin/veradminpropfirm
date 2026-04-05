@@ -1,0 +1,1095 @@
+{
+  "demo_alpha_001": {
+    "identity": {
+      "accountId": "acct_alpha_001",
+      "accountLabel": "Demo Alpha 001",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 10100000,
+      "peakBalanceCents": 10400000,
+      "dayStartBalanceCents": 10150000,
+      "totalProfitCents": 100000,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 9900000,
+      "dailyFloorCents": 9900000,
+      "dominantFloorType": "daily",
+      "dominantFloorCents": 9900000,
+      "hardBufferCents": 200000,
+      "dailyBufferCents": 200000,
+      "dominantBufferCents": 200000
+    },
+    "lives": {
+      "hardFullLives": 2,
+      "hardFractionalLives": 2,
+      "dailyFullLives": 2,
+      "dailyFractionalLives": 2,
+      "effectiveFullLives": 2,
+      "effectiveFractionalLives": 2,
+      "limitingSource": "daily"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 6,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "approaching",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [
+        "lifecycle_not_payout_active"
+      ],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [],
+      "dominant": null,
+      "hardStop": false,
+      "hardStopReason": null,
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "preservation",
+      "reasons": [
+        "Effective lives or policy pressure require protective handling."
+      ]
+    },
+    "permissions": {
+      "mayTrade": true,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": true,
+      "mustNotTrade": false,
+      "allowedRiskAmountCents": 50000,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "preservation_pressure",
+        "severity": "medium",
+        "title": "Protection pressure active",
+        "message": "Effective lives have narrowed and preservation behavior is advised.",
+        "active": true
+      },
+      {
+        "code": "payout_approaching",
+        "severity": "medium",
+        "title": "Payout state approaching",
+        "message": "The account is nearing payout significance but is not requestable yet.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "trade_fractional_only",
+      "priority": "medium",
+      "summary": "Trade only reduced size while protection constraints remain dominant.",
+      "reasonCodes": [
+        "preservation"
+      ]
+    },
+    "explanations": {
+      "summary": "Trade only reduced size while protection constraints remain dominant.",
+      "whyThisState": [
+        "Effective lives or policy pressure require protective handling.",
+        "Profile Funded Trailing governs this evaluation.",
+        "daily floor is dominant at 9900000 cents."
+      ],
+      "whyNotTradable": [],
+      "whyPayoutBlocked": [
+        "Payout is blocked by lifecycle_not_payout_active."
+      ],
+      "dominantRestriction": null
+    }
+  },
+  "demo_alpha_002": {
+    "identity": {
+      "accountId": "acct_alpha_002",
+      "accountLabel": "Demo Alpha 002",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_payout_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 10200000,
+      "peakBalanceCents": 10600000,
+      "dayStartBalanceCents": 10300000,
+      "totalProfitCents": 200000,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 10100000,
+      "dailyFloorCents": 10050000,
+      "dominantFloorType": "hard",
+      "dominantFloorCents": 10100000,
+      "hardBufferCents": 100000,
+      "dailyBufferCents": 150000,
+      "dominantBufferCents": 100000
+    },
+    "lives": {
+      "hardFullLives": 1,
+      "hardFractionalLives": 1,
+      "dailyFullLives": 1,
+      "dailyFractionalLives": 1.5,
+      "effectiveFullLives": 1,
+      "effectiveFractionalLives": 1,
+      "limitingSource": "hard"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 7,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "pending",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [],
+      "pendingPayoutStatus": "planned",
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [],
+      "dominant": null,
+      "hardStop": false,
+      "hardStopReason": null,
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "payout_protection",
+      "reasons": [
+        "Payout-significant state now takes precedence over push behavior."
+      ]
+    },
+    "permissions": {
+      "mayTrade": true,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": true,
+      "mustNotTrade": false,
+      "allowedRiskAmountCents": 50000,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "low_effective_lives",
+        "severity": "high",
+        "title": "Only fractional room remains",
+        "message": "Effective lives are in the recovery zone.",
+        "active": true
+      },
+      {
+        "code": "payout_pending",
+        "severity": "medium",
+        "title": "Payout workflow already active",
+        "message": "An existing payout workflow is open for this account.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "trade_fractional_only",
+      "priority": "medium",
+      "summary": "Trade only reduced size while protection constraints remain dominant.",
+      "reasonCodes": [
+        "payout_protection"
+      ]
+    },
+    "explanations": {
+      "summary": "Trade only reduced size while protection constraints remain dominant.",
+      "whyThisState": [
+        "Payout-significant state now takes precedence over push behavior.",
+        "Profile Funded Trailing governs this evaluation.",
+        "hard floor is dominant at 10100000 cents."
+      ],
+      "whyNotTradable": [],
+      "whyPayoutBlocked": [],
+      "dominantRestriction": null
+    }
+  },
+  "demo_beta_001": {
+    "identity": {
+      "accountId": "acct_beta_001",
+      "accountLabel": "Demo Beta 001",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_eval_static_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "evaluation_step1",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 5000000,
+      "currentBalanceCents": 5300000,
+      "peakBalanceCents": 5300000,
+      "dayStartBalanceCents": 5200000,
+      "totalProfitCents": 300000,
+      "fullRiskAmountCents": 50000
+    },
+    "thresholds": {
+      "hardFloorCents": 4400000,
+      "dailyFloorCents": 4950000,
+      "dominantFloorType": "daily",
+      "dominantFloorCents": 4950000,
+      "hardBufferCents": 900000,
+      "dailyBufferCents": 350000,
+      "dominantBufferCents": 350000
+    },
+    "lives": {
+      "hardFullLives": 18,
+      "hardFractionalLives": 18,
+      "dailyFullLives": 7,
+      "dailyFractionalLives": 7,
+      "effectiveFullLives": 7,
+      "effectiveFractionalLives": 7,
+      "limitingSource": "daily"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": false,
+      "daysTradedReference": 3,
+      "targetEnabled": true,
+      "targetCents": 800000,
+      "targetRemainingCents": 500000,
+      "targetProgressRatio": 0.375,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": false,
+      "state": "not_applicable",
+      "waitingPeriodMet": false,
+      "cadenceMet": false,
+      "nextEligibleAt": null,
+      "blockers": [],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": false
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [],
+      "dominant": null,
+      "hardStop": false,
+      "hardStopReason": null,
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "attack",
+      "reasons": [
+        "No controlling restriction dominates and risk space remains healthy."
+      ]
+    },
+    "permissions": {
+      "mayTrade": true,
+      "mayTradeFullSize": true,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": false,
+      "allowedRiskAmountCents": 50000,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [],
+    "nextAction": {
+      "code": "trade_full_size",
+      "priority": "medium",
+      "summary": "Normal deployment remains allowed under current constraints.",
+      "reasonCodes": [
+        "attack"
+      ]
+    },
+    "explanations": {
+      "summary": "Normal deployment remains allowed under current constraints.",
+      "whyThisState": [
+        "No controlling restriction dominates and risk space remains healthy.",
+        "Profile Evaluation Static Target governs this evaluation.",
+        "daily floor is dominant at 4950000 cents."
+      ],
+      "whyNotTradable": [],
+      "whyPayoutBlocked": [],
+      "dominantRestriction": null
+    }
+  },
+  "demo_beta_003": {
+    "identity": {
+      "accountId": "acct_beta_003",
+      "accountLabel": "Demo Beta 003",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_eval_static_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "paused_inactive",
+      "status": "paused",
+      "terminal": false,
+      "paused": true,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 5000000,
+      "currentBalanceCents": 5100000,
+      "peakBalanceCents": 5200000,
+      "dayStartBalanceCents": 5100000,
+      "totalProfitCents": 100000,
+      "fullRiskAmountCents": 50000
+    },
+    "thresholds": {
+      "hardFloorCents": 4400000,
+      "dailyFloorCents": 4850000,
+      "dominantFloorType": "daily",
+      "dominantFloorCents": 4850000,
+      "hardBufferCents": 700000,
+      "dailyBufferCents": 250000,
+      "dominantBufferCents": 250000
+    },
+    "lives": {
+      "hardFullLives": 14,
+      "hardFractionalLives": 14,
+      "dailyFullLives": 5,
+      "dailyFractionalLives": 5,
+      "effectiveFullLives": 5,
+      "effectiveFractionalLives": 5,
+      "limitingSource": "daily"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": false,
+      "daysTradedReference": 4,
+      "targetEnabled": true,
+      "targetCents": 800000,
+      "targetRemainingCents": 700000,
+      "targetProgressRatio": 0.125,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": false,
+      "state": "not_applicable",
+      "waitingPeriodMet": false,
+      "cadenceMet": false,
+      "nextEligibleAt": null,
+      "blockers": [],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": false
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [
+        "paused_or_cooldown"
+      ],
+      "dominant": "paused_or_cooldown",
+      "hardStop": true,
+      "hardStopReason": "paused_or_cooldown",
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "cooldown",
+      "reasons": [
+        "Controlling restriction paused_or_cooldown blocks operation."
+      ]
+    },
+    "permissions": {
+      "mayTrade": false,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": true,
+      "allowedRiskAmountCents": 0,
+      "mayRequestPayout": false,
+      "mayResume": true,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "paused_or_cooldown",
+        "severity": "medium",
+        "title": "Account is paused",
+        "message": "Manual pause or inactive lifecycle state is active.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "do_not_trade",
+      "priority": "critical",
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "reasonCodes": [
+        "paused_or_cooldown"
+      ]
+    },
+    "explanations": {
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "whyThisState": [
+        "Controlling restriction paused_or_cooldown blocks operation.",
+        "Profile Evaluation Static Target governs this evaluation.",
+        "daily floor is dominant at 4850000 cents."
+      ],
+      "whyNotTradable": [
+        "Trading is blocked by paused_or_cooldown."
+      ],
+      "whyPayoutBlocked": [],
+      "dominantRestriction": "paused_or_cooldown"
+    }
+  },
+  "edge_alpha_exact_floor": {
+    "identity": {
+      "accountId": "edge_alpha_exact_floor",
+      "accountLabel": "Edge Alpha Exact Floor",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 9800000,
+      "peakBalanceCents": 10300000,
+      "dayStartBalanceCents": 10000000,
+      "totalProfitCents": -200000,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 9800000,
+      "dailyFloorCents": 9750000,
+      "dominantFloorType": "hard",
+      "dominantFloorCents": 9800000,
+      "hardBufferCents": 0,
+      "dailyBufferCents": 50000,
+      "dominantBufferCents": 0
+    },
+    "lives": {
+      "hardFullLives": 0,
+      "hardFractionalLives": 0,
+      "dailyFullLives": 0,
+      "dailyFractionalLives": 0.5,
+      "effectiveFullLives": 0,
+      "effectiveFractionalLives": 0,
+      "limitingSource": "hard"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 6,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "approaching",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [
+        "lifecycle_not_payout_active"
+      ],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [
+        "hard_floor_reached",
+        "insufficient_effective_lives"
+      ],
+      "dominant": "hard_floor_reached",
+      "hardStop": true,
+      "hardStopReason": "hard_floor_reached",
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "stopped",
+      "reasons": [
+        "Controlling restriction hard_floor_reached blocks operation."
+      ]
+    },
+    "permissions": {
+      "mayTrade": false,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": true,
+      "allowedRiskAmountCents": 0,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "hard_floor_reached",
+        "severity": "critical",
+        "title": "Hard floor reached",
+        "message": "The account is exactly on its hard floor and must not be pushed further.",
+        "active": true
+      },
+      {
+        "code": "low_effective_lives",
+        "severity": "high",
+        "title": "Only fractional room remains",
+        "message": "Effective lives are in the recovery zone.",
+        "active": true
+      },
+      {
+        "code": "payout_approaching",
+        "severity": "medium",
+        "title": "Payout state approaching",
+        "message": "The account is nearing payout significance but is not requestable yet.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "do_not_trade",
+      "priority": "critical",
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "reasonCodes": [
+        "hard_floor_reached"
+      ]
+    },
+    "explanations": {
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "whyThisState": [
+        "Controlling restriction hard_floor_reached blocks operation.",
+        "Profile Funded Trailing governs this evaluation.",
+        "hard floor is dominant at 9800000 cents."
+      ],
+      "whyNotTradable": [
+        "Trading is blocked by hard_floor_reached."
+      ],
+      "whyPayoutBlocked": [
+        "Payout is blocked by lifecycle_not_payout_active."
+      ],
+      "dominantRestriction": "hard_floor_reached"
+    }
+  },
+  "edge_alpha_above_floor": {
+    "identity": {
+      "accountId": "edge_alpha_above_floor",
+      "accountLabel": "Edge Alpha Above Floor",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 9800001,
+      "peakBalanceCents": 10300000,
+      "dayStartBalanceCents": 10000000,
+      "totalProfitCents": -199999,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 9800000,
+      "dailyFloorCents": 9750000,
+      "dominantFloorType": "hard",
+      "dominantFloorCents": 9800000,
+      "hardBufferCents": 1,
+      "dailyBufferCents": 50001,
+      "dominantBufferCents": 1
+    },
+    "lives": {
+      "hardFullLives": 0,
+      "hardFractionalLives": 0,
+      "dailyFullLives": 0,
+      "dailyFractionalLives": 0.5,
+      "effectiveFullLives": 0,
+      "effectiveFractionalLives": 0,
+      "limitingSource": "hard"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 6,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "approaching",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [
+        "lifecycle_not_payout_active"
+      ],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [
+        "insufficient_effective_lives"
+      ],
+      "dominant": "insufficient_effective_lives",
+      "hardStop": true,
+      "hardStopReason": "insufficient_effective_lives",
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "stopped",
+      "reasons": [
+        "Controlling restriction insufficient_effective_lives blocks operation."
+      ]
+    },
+    "permissions": {
+      "mayTrade": false,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": true,
+      "allowedRiskAmountCents": 0,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "insufficient_effective_lives",
+        "severity": "high",
+        "title": "Risk space is too narrow",
+        "message": "Effective lives are below the minimum tradable threshold.",
+        "active": true
+      },
+      {
+        "code": "payout_approaching",
+        "severity": "medium",
+        "title": "Payout state approaching",
+        "message": "The account is nearing payout significance but is not requestable yet.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "do_not_trade",
+      "priority": "critical",
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "reasonCodes": [
+        "insufficient_effective_lives"
+      ]
+    },
+    "explanations": {
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "whyThisState": [
+        "Controlling restriction insufficient_effective_lives blocks operation.",
+        "Profile Funded Trailing governs this evaluation.",
+        "hard floor is dominant at 9800000 cents."
+      ],
+      "whyNotTradable": [
+        "Trading is blocked by insufficient_effective_lives."
+      ],
+      "whyPayoutBlocked": [
+        "Payout is blocked by lifecycle_not_payout_active."
+      ],
+      "dominantRestriction": "insufficient_effective_lives"
+    }
+  },
+  "edge_beta_below_floor": {
+    "identity": {
+      "accountId": "edge_beta_below_floor",
+      "accountLabel": "Edge Beta Below Floor",
+      "evaluationTimestamp": "2026-04-05T10:00:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 9799999,
+      "peakBalanceCents": 10300000,
+      "dayStartBalanceCents": 10000000,
+      "totalProfitCents": -200001,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 9800000,
+      "dailyFloorCents": 9750000,
+      "dominantFloorType": "hard",
+      "dominantFloorCents": 9800000,
+      "hardBufferCents": -1,
+      "dailyBufferCents": 49999,
+      "dominantBufferCents": -1
+    },
+    "lives": {
+      "hardFullLives": 0,
+      "hardFractionalLives": 0,
+      "dailyFullLives": 0,
+      "dailyFractionalLives": 0.5,
+      "effectiveFullLives": 0,
+      "effectiveFractionalLives": 0,
+      "limitingSource": "hard"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 6,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "approaching",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [
+        "lifecycle_not_payout_active"
+      ],
+      "pendingPayoutStatus": null,
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [
+        "hard_floor_breached",
+        "insufficient_effective_lives"
+      ],
+      "dominant": "hard_floor_breached",
+      "hardStop": true,
+      "hardStopReason": "hard_floor_breached",
+      "newsLockActive": false,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "breached",
+      "reasons": [
+        "terminal failure condition is active."
+      ]
+    },
+    "permissions": {
+      "mayTrade": false,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": true,
+      "allowedRiskAmountCents": 0,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "hard_floor_breached",
+        "severity": "critical",
+        "title": "Account breached",
+        "message": "The account is below its hard operating floor or already marked breached.",
+        "active": true
+      },
+      {
+        "code": "insufficient_effective_lives",
+        "severity": "high",
+        "title": "Risk space is too narrow",
+        "message": "Effective lives are below the minimum tradable threshold.",
+        "active": true
+      },
+      {
+        "code": "payout_approaching",
+        "severity": "medium",
+        "title": "Payout state approaching",
+        "message": "The account is nearing payout significance but is not requestable yet.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "inspect_timeline",
+      "priority": "critical",
+      "summary": "Inspect breach context and keep the account out of rotation.",
+      "reasonCodes": [
+        "hard_floor_breached"
+      ]
+    },
+    "explanations": {
+      "summary": "Inspect breach context and keep the account out of rotation.",
+      "whyThisState": [
+        "terminal failure condition is active.",
+        "Profile Funded Trailing governs this evaluation.",
+        "hard floor is dominant at 9800000 cents."
+      ],
+      "whyNotTradable": [
+        "Trading is blocked by hard_floor_breached."
+      ],
+      "whyPayoutBlocked": [
+        "Payout is blocked by lifecycle_not_payout_active."
+      ],
+      "dominantRestriction": "hard_floor_breached"
+    }
+  },
+  "edge_beta_collision": {
+    "identity": {
+      "accountId": "edge_beta_collision",
+      "accountLabel": "Edge Beta Collision",
+      "evaluationTimestamp": "2026-04-05T12:20:00Z",
+      "ruleProfileVersionId": "rpv_funded_trailing_v1",
+      "evaluationMode": "live"
+    },
+    "integrity": {
+      "valid": true,
+      "issues": []
+    },
+    "lifecycle": {
+      "stage": "funded_payout_active",
+      "status": "active",
+      "terminal": false,
+      "paused": false,
+      "archived": false
+    },
+    "references": {
+      "startingBalanceCents": 10000000,
+      "currentBalanceCents": 10250000,
+      "peakBalanceCents": 10600000,
+      "dayStartBalanceCents": 10300000,
+      "totalProfitCents": 250000,
+      "fullRiskAmountCents": 100000
+    },
+    "thresholds": {
+      "hardFloorCents": 10100000,
+      "dailyFloorCents": 10050000,
+      "dominantFloorType": "hard",
+      "dominantFloorCents": 10100000,
+      "hardBufferCents": 150000,
+      "dailyBufferCents": 200000,
+      "dominantBufferCents": 150000
+    },
+    "lives": {
+      "hardFullLives": 1,
+      "hardFractionalLives": 1.5,
+      "dailyFullLives": 2,
+      "dailyFractionalLives": 2,
+      "effectiveFullLives": 1,
+      "effectiveFractionalLives": 1.5,
+      "limitingSource": "hard"
+    },
+    "progression": {
+      "minimumTradingDaysRequired": 5,
+      "minimumTradingDaysMet": true,
+      "daysTradedReference": 8,
+      "targetEnabled": false,
+      "targetCents": 0,
+      "targetRemainingCents": null,
+      "targetProgressRatio": null,
+      "targetMet": false,
+      "stageCompletionEligible": false
+    },
+    "payout": {
+      "relevant": true,
+      "state": "pending",
+      "waitingPeriodMet": true,
+      "cadenceMet": true,
+      "nextEligibleAt": "2026-03-15T00:00:00.000Z",
+      "blockers": [],
+      "pendingPayoutStatus": "planned",
+      "payoutProtectionRelevant": true
+    },
+    "consistency": {
+      "relevant": false,
+      "state": "not_applicable",
+      "details": []
+    },
+    "restrictions": {
+      "active": [
+        "news_lock_active"
+      ],
+      "dominant": "news_lock_active",
+      "hardStop": true,
+      "hardStopReason": "news_lock_active",
+      "newsLockActive": true,
+      "newsLockUpcoming": false,
+      "rotationLockActive": false
+    },
+    "mode": {
+      "value": "stopped",
+      "reasons": [
+        "Controlling restriction news_lock_active blocks operation."
+      ]
+    },
+    "permissions": {
+      "mayTrade": false,
+      "mayTradeFullSize": false,
+      "mayTradeFractionalOnly": false,
+      "mustNotTrade": true,
+      "allowedRiskAmountCents": 0,
+      "mayRequestPayout": false,
+      "mayResume": false,
+      "mayOverride": false
+    },
+    "alerts": [
+      {
+        "code": "preservation_pressure",
+        "severity": "medium",
+        "title": "Protection pressure active",
+        "message": "Effective lives have narrowed and preservation behavior is advised.",
+        "active": true
+      },
+      {
+        "code": "news_lock_active",
+        "severity": "high",
+        "title": "High-impact news lock active",
+        "message": "High-impact macro release lock window is active right now.",
+        "active": true
+      },
+      {
+        "code": "payout_pending",
+        "severity": "medium",
+        "title": "Payout workflow already active",
+        "message": "An existing payout workflow is open for this account.",
+        "active": true
+      }
+    ],
+    "nextAction": {
+      "code": "do_not_trade",
+      "priority": "high",
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "reasonCodes": [
+        "news_lock_active"
+      ]
+    },
+    "explanations": {
+      "summary": "Do not trade until the controlling restriction is cleared.",
+      "whyThisState": [
+        "Controlling restriction news_lock_active blocks operation.",
+        "Profile Funded Trailing governs this evaluation.",
+        "hard floor is dominant at 10100000 cents."
+      ],
+      "whyNotTradable": [
+        "Trading is blocked by news_lock_active."
+      ],
+      "whyPayoutBlocked": [],
+      "dominantRestriction": "news_lock_active"
+    }
+  }
+}
