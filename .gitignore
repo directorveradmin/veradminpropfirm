@@ -1,0 +1,35 @@
+# -------------------------------
+# Node.js / Next.js
+# -------------------------------
+node_modules/
+.next/
+out/
+
+# Optional npm/yarn/pnpm lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# -------------------------------
+# Tauri / Rust build outputs
+# -------------------------------
+src-tauri/target/
+**/*.rlib
+**/*.rmeta
+**/*.dll
+**/*.pdb
+**/*.exe
+
+# -------------------------------
+# Local environment files
+# -------------------------------
+.env.local
+.veradmin-dev/
+
+# -------------------------------
+# OS / IDE files
+# -------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

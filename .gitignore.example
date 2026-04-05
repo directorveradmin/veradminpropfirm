@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+dist
+.veradmin-dev
+.env.local
+.DS_Store
+src-tauri/target

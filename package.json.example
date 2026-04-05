@@ -1,0 +1,23 @@
+{
+  "name": "veradmin",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "doctor": "node ./scripts/doctor.mjs",
+    "dev:web": "next dev",
+    "dev:desktop": "tauri dev",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx ./scripts/db/migrate.ts",
+    "db:seed:demo": "tsx ./scripts/db/seed-demo.ts",
+    "db:seed:edge": "tsx ./scripts/db/seed-edge.ts",
+    "dev:reset": "bash ./scripts/reset-local-dev.sh",
+    "build:web": "next build",
+    "build:desktop": "pnpm build:web && tauri build",
+    "tree": "bash ./scripts/print-repo-tree.sh"
+  }
+}
