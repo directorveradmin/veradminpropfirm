@@ -4,6 +4,7 @@
 node_modules/
 .next/
 out/
+*.tsbuildinfo
 
 # Optional npm/yarn/pnpm lockfiles
 package-lock.json
