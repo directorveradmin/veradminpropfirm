@@ -1,5 +1,17 @@
-/**
- * Step 2 placeholder.
- * Step 3 should load edge-case fleet data here.
- */
-console.log('TODO: seed edge-case fleet into', process.env.VERADMIN_DB_PATH || '.veradmin-dev/veradmin.dev.sqlite');
+import { createDb } from '../../db/client';
+import { edgeFleetFixture } from '../../db/fixtures/fleets/edgeFleet';
+import { seedFixture } from './seed-utils';
+
+function main() {
+  const { sqlite, db, dbPath } = createDb();
+
+  try {
+    console.log(`Seeding edge fixture into ${dbPath}`);
+    seedFixture(db, edgeFleetFixture);
+    console.log('Edge fixture loaded.');
+  } finally {
+    sqlite.close();
+  }
+}
+
+main();

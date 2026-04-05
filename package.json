@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:generate": "tsx ./scripts/db/migrate.ts",
+    "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx ./scripts/db/migrate.ts",
     "db:seed:demo": "tsx ./scripts/db/seed-demo.ts",
     "db:seed:edge": "tsx ./scripts/db/seed-edge.ts",
@@ -19,5 +19,22 @@
     "build:web": "next build",
     "build:desktop": "cd src-tauri && tauri build",
     "tree": "bash ./scripts/print-repo-tree.sh"
+  },
+  "dependencies": {
+    "better-sqlite3": "12.8.0",
+    "drizzle-orm": "0.45.2",
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "25.5.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "drizzle-kit": "0.31.10",
+    "tsx": "4.21.0",
+    "typescript": "6.0.2"
   }
 }

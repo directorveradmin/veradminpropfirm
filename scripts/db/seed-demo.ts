@@ -1,5 +1,17 @@
-/**
- * Step 2 placeholder.
- * Step 3 should load a realistic demo fleet fixture here.
- */
-console.log('TODO: seed demo fleet into', process.env.VERADMIN_DB_PATH || '.veradmin-dev/veradmin.dev.sqlite');
+import { createDb } from '../../db/client';
+import { demoFleetFixture } from '../../db/fixtures/fleets/demoFleet';
+import { seedFixture } from './seed-utils';
+
+function main() {
+  const { sqlite, db, dbPath } = createDb();
+
+  try {
+    console.log(`Seeding demo fixture into ${dbPath}`);
+    seedFixture(db, demoFleetFixture);
+    console.log('Demo fixture loaded.');
+  } finally {
+    sqlite.close();
+  }
+}
+
+main();

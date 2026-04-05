@@ -1,5 +1,24 @@
-/**
- * Step 2 placeholder.
- * Step 3 should wire this to the chosen SQLite runtime/migration path.
- */
-console.log('TODO: apply Veradmin SQLite migrations to', process.env.VERADMIN_DB_PATH || '.veradmin-dev/veradmin.dev.sqlite');
+import path from 'node:path';
+
+import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+
+import { createDb } from '../../db/client';
+
+function main() {
+  const { sqlite, db, dbPath } = createDb();
+
+  try {
+    const migrationsFolder = path.resolve(process.cwd(), 'db', 'migrations');
+
+    console.log(`Applying migrations from ${migrationsFolder}`);
+    console.log(`Using database at ${dbPath}`);
+
+    migrate(db, { migrationsFolder });
+
+    console.log('Migrations applied successfully.');
+  } finally {
+    sqlite.close();
+  }
+}
+
+main();
