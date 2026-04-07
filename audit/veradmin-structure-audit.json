@@ -1,0 +1,514 @@
+﻿{
+    "Summary":  {
+                    "RepoRoot":  "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold",
+                    "AuditedAt":  "2026-04-07T17:52:41",
+                    "BaselineDirectoriesMissing":  0,
+                    "BaselineFilesMissing":  0,
+                    "Step5FilesMissing":  0,
+                    "Step6FilesMissing":  0,
+                    "Step7PromptAnchorsMissing":  0,
+                    "Step7CandidateFileCount":  15
+                },
+    "Results":  [
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "docs",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "public",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "scripts",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "scripts\\db",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\app",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\components",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\features",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\hooks",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib\\domain",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib\\platform",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib\\services",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib\\validation",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src\\lib\\view-models",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db\\fixtures",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db\\migrations",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db\\repositories",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db\\schema",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "db\\seeds",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "tests",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "tests\\fixtures",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "tests\\integration",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "tests\\unit",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src-tauri",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineDirectory",
+                        "Path":  "src-tauri\\src",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  ".env.example",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  ".gitignore",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  ".npmrc",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  "drizzle.config.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  "package.json",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  "tsconfig.json",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  "src\\app\\layout.tsx",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "BaselineFile",
+                        "Path":  "src\\app\\page.tsx",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "docs\\36-state-management-and-view-models.md",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "docs\\step5-view-model-structure-guide.md",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "docs\\step5-update-flow-diagrams.md",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "handoff_step5_to_step6.md",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\hooks\\useRefreshSignal.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\services\\refreshCoordinator.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\services\\index.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\services\\read-models\\types.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\services\\read-models\\builders.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\services\\read-models\\index.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\common.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\dashboard.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\accountDetail.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\journal.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\payouts.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\calendar.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\alerts.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step5Expected",
+                        "Path":  "src\\lib\\view-models\\index.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\accountLifecycleService.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\profileAssignmentService.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\accountEventWorkflowService.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\payoutWorkflowService.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\accountHistoryIntegrityService.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\accountWorkflowTypes.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\lib\\services\\workflowHelpers\\step6ViewModelIntegrator.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\features\\screens\\exampleStep7Usage.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step6Expected",
+                        "Path":  "src\\features\\screens\\auditStep6.ts",
+                        "Type":  "File",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "27-command-center-screen-spec.md",
+                        "Type":  "FileOrDirectory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\features\\dashboard",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\app",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\components",
+                        "Type":  "Directory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\lib\\view-models\\dashboard.ts",
+                        "Type":  "FileOrDirectory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\lib\\services\\refreshCoordinator.ts",
+                        "Type":  "FileOrDirectory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    },
+                    {
+                        "Category":  "Step7PromptAnchor",
+                        "Path":  "src\\hooks\\useRefreshSignal.ts",
+                        "Type":  "FileOrDirectory",
+                        "Exists":  true,
+                        "Notes":  ""
+                    }
+                ],
+    "Step7CandidateFiles":  [
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\27-command-center-screen-spec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\db\\fixtures\\fleets\\demoFleet.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\db\\fixtures\\fleets\\edgeFleet.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\docs\\08-dashboard-and-navigation-spec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\docs\\10-payouts-rotations-and-alerts-spec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\docs\\27-command-center-screen-spec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\docs\\32-alerts-screen-spec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\docs\\42-alert-severity-model.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\node_modules\\.pnpm\\next@16.2.2_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\lib\\create-client-router-filter.d.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\node_modules\\.pnpm\\next@16.2.2_react-dom@19.2.4_react@19.2.4__react@19.2.4\\node_modules\\next\\dist\\shared\\lib\\bloom-filter.d.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\src\\features\\dashboard\\commandCenterIntegrationScaffold.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\src\\features\\dashboard\\commandCenterScreenSpec.md",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\src\\lib\\view-models\\alerts.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\src\\lib\\view-models\\dashboard.ts",
+                                "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold\\src\\lib\\view-models\\dashboard\\commandCenterViewModels.ts"
+                            ]
+}

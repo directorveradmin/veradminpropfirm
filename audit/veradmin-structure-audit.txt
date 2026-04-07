@@ -1,0 +1,107 @@
+﻿Veradmin Structure Audit
+RepoRoot: C:\Users\emb95\Documents\veradminpropfirm\scaffold
+AuditedAt: 2026-04-07T17:52:41
+
+Missing baseline directories: 0
+Missing baseline files: 0
+Missing Step 5 files: 0
+Missing Step 6 files: 0
+Missing Step 7 prompt anchors: 0
+Step 7 candidate files found by name pattern: 15
+
+[BaselineDirectory]
+ - OK :: db
+ - OK :: db\fixtures
+ - OK :: db\migrations
+ - OK :: db\repositories
+ - OK :: db\schema
+ - OK :: db\seeds
+ - OK :: docs
+ - OK :: public
+ - OK :: scripts
+ - OK :: scripts\db
+ - OK :: src
+ - OK :: src\app
+ - OK :: src\components
+ - OK :: src\features
+ - OK :: src\hooks
+ - OK :: src\lib
+ - OK :: src\lib\domain
+ - OK :: src\lib\platform
+ - OK :: src\lib\services
+ - OK :: src\lib\validation
+ - OK :: src\lib\view-models
+ - OK :: src-tauri
+ - OK :: src-tauri\src
+ - OK :: tests
+ - OK :: tests\fixtures
+ - OK :: tests\integration
+ - OK :: tests\unit
+
+[BaselineFile]
+ - OK :: .env.example
+ - OK :: .gitignore
+ - OK :: .npmrc
+ - OK :: drizzle.config.ts
+ - OK :: package.json
+ - OK :: src\app\layout.tsx
+ - OK :: src\app\page.tsx
+ - OK :: tsconfig.json
+
+[Step5Expected]
+ - OK :: docs\36-state-management-and-view-models.md
+ - OK :: docs\step5-update-flow-diagrams.md
+ - OK :: docs\step5-view-model-structure-guide.md
+ - OK :: handoff_step5_to_step6.md
+ - OK :: src\hooks\useRefreshSignal.ts
+ - OK :: src\lib\services\index.ts
+ - OK :: src\lib\services\read-models\builders.ts
+ - OK :: src\lib\services\read-models\index.ts
+ - OK :: src\lib\services\read-models\types.ts
+ - OK :: src\lib\services\refreshCoordinator.ts
+ - OK :: src\lib\view-models\accountDetail.ts
+ - OK :: src\lib\view-models\alerts.ts
+ - OK :: src\lib\view-models\calendar.ts
+ - OK :: src\lib\view-models\common.ts
+ - OK :: src\lib\view-models\dashboard.ts
+ - OK :: src\lib\view-models\index.ts
+ - OK :: src\lib\view-models\journal.ts
+ - OK :: src\lib\view-models\payouts.ts
+
+[Step6Expected]
+ - OK :: src\features\screens\auditStep6.ts
+ - OK :: src\features\screens\exampleStep7Usage.ts
+ - OK :: src\lib\services\accountEventWorkflowService.ts
+ - OK :: src\lib\services\accountHistoryIntegrityService.ts
+ - OK :: src\lib\services\accountLifecycleService.ts
+ - OK :: src\lib\services\accountWorkflowTypes.ts
+ - OK :: src\lib\services\payoutWorkflowService.ts
+ - OK :: src\lib\services\profileAssignmentService.ts
+ - OK :: src\lib\services\workflowHelpers\step6ViewModelIntegrator.ts
+
+[Step7PromptAnchor]
+ - OK :: 27-command-center-screen-spec.md
+ - OK :: src\app
+ - OK :: src\components
+ - OK :: src\features\dashboard
+ - OK :: src\hooks\useRefreshSignal.ts
+ - OK :: src\lib\services\refreshCoordinator.ts
+ - OK :: src\lib\view-models\dashboard.ts
+
+[Step7CandidateFiles]
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\27-command-center-screen-spec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\db\fixtures\fleets\demoFleet.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\db\fixtures\fleets\edgeFleet.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\docs\08-dashboard-and-navigation-spec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\docs\10-payouts-rotations-and-alerts-spec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\docs\27-command-center-screen-spec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\docs\32-alerts-screen-spec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\docs\42-alert-severity-model.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\node_modules\.pnpm\next@16.2.2_react-dom@19.2.4_react@19.2.4__react@19.2.4\node_modules\next\dist\lib\create-client-router-filter.d.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\node_modules\.pnpm\next@16.2.2_react-dom@19.2.4_react@19.2.4__react@19.2.4\node_modules\next\dist\shared\lib\bloom-filter.d.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\src\features\dashboard\commandCenterIntegrationScaffold.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\src\features\dashboard\commandCenterScreenSpec.md
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\src\lib\view-models\alerts.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\src\lib\view-models\dashboard.ts
+ - C:\Users\emb95\Documents\veradminpropfirm\scaffold\src\lib\view-models\dashboard\commandCenterViewModels.ts
+

@@ -1,0 +1,147 @@
+﻿{
+    "RepoRoot":  "C:\\Users\\emb95\\Documents\\veradminpropfirm\\scaffold",
+    "AuditedAt":  "2026-04-07T17:54:02",
+    "Checks":  [
+                   {
+                       "Id":  "step7.dashboard.files",
+                       "Status":  "pass",
+                       "Message":  "Dashboard feature folder contains implementation files.",
+                       "Evidence":  [
+                                        "src\\features\\dashboard\\commandCenterIntegrationScaffold.ts",
+                                        "src\\features\\dashboard\\commandCenterScreenSpec.md"
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.accounts.files",
+                       "Status":  "pass",
+                       "Message":  "Accounts feature folder is still placeholder-only. No obvious later-step expansion here.",
+                       "Evidence":  [
+
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.integration.prereqs",
+                       "Status":  "pass",
+                       "Message":  "Step 5 and Step 6 integration prerequisites are present.",
+                       "Evidence":  [
+                                        "src\\lib\\services\\refreshCoordinator.ts",
+                                        "src\\lib\\services\\accountWorkflowTypes.ts",
+                                        "src\\lib\\services\\workflowHelpers\\step6ViewModelIntegrator.ts",
+                                        "src\\lib\\services\\read-models\\builders.ts",
+                                        "src\\lib\\services\\read-models\\index.ts",
+                                        "src\\lib\\view-models\\dashboard.ts",
+                                        "src\\hooks\\useRefreshSignal.ts"
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.app.entry",
+                       "Status":  "pass",
+                       "Message":  "src/app/page.tsx no longer looks like the scaffold placeholder.",
+                       "Evidence":  "Custom page content detected"
+                   },
+                   {
+                       "Id":  "step7.command-center.signals",
+                       "Status":  "pass",
+                       "Message":  "Multiple Command Center behavior signals were found in the codebase.",
+                       "Evidence":  [
+                                        "27-command-center-screen-spec.md:34: 2. Which accounts are currently tradable?",
+                                        "27-command-center-screen-spec.md:36: 4. Which accounts are restricted or stopped?",
+                                        "27-command-center-screen-spec.md:75: 2. Todayâ€™s Mission",
+                                        "27-command-center-screen-spec.md:76: 3. Fleet Health Strip",
+                                        "27-command-center-screen-spec.md:77: 4. Critical Alerts / Priority Warnings",
+                                        "27-command-center-screen-spec.md:103: ## 6. Todayâ€™s Mission Panel",
+                                        "27-command-center-screen-spec.md:125: ## 7. Fleet Health Strip",
+                                        "27-command-center-screen-spec.md:127: The Fleet Health Strip is the compact â€œstate of the fleetâ€ band.",
+                                        "27-command-center-screen-spec.md:131: - tradable accounts",
+                                        "27-command-center-screen-spec.md:132: - restricted accounts",
+                                        "27-command-center-screen-spec.md:133: - stopped accounts",
+                                        "27-command-center-screen-spec.md:134: - payout-ready accounts",
+                                        "27-command-center-screen-spec.md:136: - overall fleet health score",
+                                        "27-command-center-screen-spec.md:146: ## 8. Critical Alerts and Priority Warning Zone",
+                                        "27-command-center-screen-spec.md:198: - tradable/restricted/stopped state",
+                                        "27-command-center-screen-spec.md:235: - tradable only",
+                                        "27-command-center-screen-spec.md:236: - payout-ready only",
+                                        "27-command-center-screen-spec.md:254: - log win",
+                                        "27-command-center-screen-spec.md:255: - log loss",
+                                        "27-command-center-screen-spec.md:256: - log custom event",
+                                        "27-command-center-screen-spec.md:258: - request payout",
+                                        "27-command-center-screen-spec.md:260: - open simulation",
+                                        "27-command-center-screen-spec.md:273: - tradable state changes",
+                                        "27-command-center-screen-spec.md:277: - fleet health metrics",
+                                        "27-command-center-screen-spec.md:288: - no critical alerts"
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.integration.signals",
+                       "Status":  "pass",
+                       "Message":  "The codebase shows evidence of Step 5/6 -\u003e Step 7 integration wiring.",
+                       "Evidence":  [
+                                        "audit\\veradmin-step7-audit.md:25: - src\\lib\\services\\refreshCoordinator.ts",
+                                        "audit\\veradmin-step7-audit.md:27: - src\\lib\\services\\workflowHelpers\\step6ViewModelIntegrator.ts",
+                                        "audit\\veradmin-step7-audit.md:28: - src\\lib\\services\\read-models\\builders.ts",
+                                        "audit\\veradmin-step7-audit.md:29: - src\\lib\\services\\read-models\\index.ts",
+                                        "audit\\veradmin-step7-audit.md:31: - src\\hooks\\useRefreshSignal.ts",
+                                        "audit\\veradmin-step7-audit.md:73: - audit\\veradmin-step7-audit.md:25: - src\\lib\\services\\refreshCoordinator.ts",
+                                        "audit\\veradmin-step7-audit.md:74: - audit\\veradmin-step7-audit.md:27: - src\\lib\\services\\workflowHelpers\\step6ViewModelIntegrator.ts",
+                                        "audit\\veradmin-step7-audit.md:75: - audit\\veradmin-step7-audit.md:28: - src\\lib\\services\\read-models\\builders.ts",
+                                        "audit\\veradmin-step7-audit.md:76: - audit\\veradmin-step7-audit.md:29: - src\\lib\\services\\read-models\\index.ts",
+                                        "audit\\veradmin-step7-audit.md:77: - audit\\veradmin-step7-audit.md:31: - src\\hooks\\useRefreshSignal.ts",
+                                        "audit\\veradmin-step7-audit.md:78: - audit\\veradmin-step7-audit.md:73: - audit\\veradmin-step7-audit.md:25: - src\\lib\\services\\refreshCoordinator.ts",
+                                        "audit\\veradmin-step7-audit.md:79: - audit\\veradmin-step7-audit.md:74: - audit\\veradmin-step7-audit.md:26: - src\\lib\\services\\read-models\\builders.ts",
+                                        "audit\\veradmin-step7-audit.md:80: - audit\\veradmin-step7-audit.md:75: - audit\\veradmin-step7-audit.md:27: - src\\lib\\services\\read-models\\index.ts",
+                                        "audit\\veradmin-step7-audit.md:81: - audit\\veradmin-step7-audit.md:76: - audit\\veradmin-step7-audit.md:29: - src\\hooks\\useRefreshSignal.ts",
+                                        "audit\\veradmin-step7-audit.md:82: - audit\\veradmin-step7-audit.md:77: - audit\\veradmin-step7-audit.md:71: - handoff_step7_to_step8.md:24: - `AccountWorkflowResult`, invalidation keys, and consequence summaries remain authoritative.",
+                                        "audit\\veradmin-step7-audit.md:83: - audit\\veradmin-step7-audit.md:78: - audit\\veradmin-step7-audit.md:72: - handoff_step7_to_step8.md:30: - `src/lib/view-models/dashboard/commandCenterViewModels.ts`",
+                                        "audit\\veradmin-step7-audit.md:84: - audit\\veradmin-step7-audit.md:79: - audit\\veradmin-step7-audit.md:73: - handoff_step7_to_step8.md:49: - The actual Step 6 service files and `step6ViewModelIntegrator.ts` if now available",
+                                        "audit\\veradmin-step7-audit.md:85: - audit\\veradmin-step7-audit.md:80: - audit\\veradmin-step7-audit.md:74: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:15: } from \u0027../../lib/view-models/dashboard/commandCenterViewModels.js\u0027",
+                                        "audit\\veradmin-step7-audit.md:86: - audit\\veradmin-step7-audit.md:81: - audit\\veradmin-step7-audit.md:75: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:22: export interface Step6AccountWorkflowResult {",
+                                        "audit\\veradmin-step7-audit.md:87: - audit\\veradmin-step7-audit.md:82: - audit\\veradmin-step7-audit.md:76: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:25: invalidationKeys: string[]",
+                                        "audit\\veradmin-step7-audit.md:88: - audit\\veradmin-step7-audit.md:83: - audit\\veradmin-step7-audit.md:77: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:48: *   src/lib/services/workflowHelpers/step6ViewModelIntegrator.ts",
+                                        "audit\\veradmin-step7-audit.md:89: - audit\\veradmin-step7-audit.md:84: - audit\\veradmin-step7-audit.md:78: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:50: export interface Step6ViewModelIntegrator {",
+                                        "audit\\veradmin-step7-audit.md:90: - audit\\veradmin-step7-audit.md:85: - audit\\veradmin-step7-audit.md:79: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:51: logWin(command: unknown): Promise\u003cStep6AccountWorkflowResult\u003e",
+                                        "audit\\veradmin-step7-audit.md:91: - audit\\veradmin-step7-audit.md:86: - audit\\veradmin-step7-audit.md:80: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:52: logLoss(command: unknown): Promise\u003cStep6AccountWorkflowResult\u003e",
+                                        "audit\\veradmin-step7-audit.md:92: - audit\\veradmin-step7-audit.md:87: - audit\\veradmin-step7-audit.md:81: - src\\features\\dashboard\\commandCenterIntegrationScaffold.ts:53: logCustomEvent(command: unknown): Promise\u003cStep6AccountWorkflowResult\u003e"
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.scope.bleed",
+                       "Status":  "pass",
+                       "Message":  "No obvious later-step implementation spillover was found in journal/payouts/calendar/alerts/settings/backups.",
+                       "Evidence":  [
+
+                                    ]
+                   },
+                   {
+                       "Id":  "step7.timeline.support",
+                       "Status":  "pass",
+                       "Message":  "Timeline and event-history support signals were found.",
+                       "Evidence":  [
+                                        "27-command-center-screen-spec.md:151: - daily restriction triggered",
+                                        "audit\\veradmin-step7-audit.md:101: No obvious later-step implementation spillover was found in journal/payouts/calendar/alerts/settings/backups.",
+                                        "audit\\veradmin-step7-audit.md:104: ## [PASS] step7.timeline.support",
+                                        "audit\\veradmin-step7-audit.md:106: Timeline and event-history support signals were found.",
+                                        "audit\\veradmin-step7-audit.md:108: - 27-command-center-screen-spec.md:151: - daily restriction triggered",
+                                        "audit\\veradmin-step7-audit.md:109: - audit\\veradmin-step7-audit.md:101: No obvious later-step implementation spillover was found in journal/payouts/calendar/alerts/settings/backups.",
+                                        "audit\\veradmin-step7-audit.md:110: - audit\\veradmin-step7-audit.md:104: ## [PASS] step7.timeline.support",
+                                        "audit\\veradmin-step7-audit.md:111: - audit\\veradmin-step7-audit.md:106: Timeline and event-history support signals were found.",
+                                        "audit\\veradmin-step7-audit.md:112: - audit\\veradmin-step7-audit.md:108: - 27-command-center-screen-spec.md:151: - daily restriction triggered",
+                                        "audit\\veradmin-step7-audit.md:113: - audit\\veradmin-step7-audit.md:109: - audit\\veradmin-step7-audit.md:99: No obvious later-step implementation spillover was found in journal/payouts/calendar/alerts/settings/backups.",
+                                        "audit\\veradmin-step7-audit.md:114: - audit\\veradmin-step7-audit.md:110: - audit\\veradmin-step7-audit.md:102: ## [PASS] step7.timeline.support",
+                                        "audit\\veradmin-step7-audit.md:115: - audit\\veradmin-step7-audit.md:111: - audit\\veradmin-step7-audit.md:104: Timeline and event-history support signals were found.",
+                                        "audit\\veradmin-step7-audit.md:116: - audit\\veradmin-step7-audit.md:112: - audit\\veradmin-step7-audit.md:106: - db\\client.ts:25: sqlite.pragma(\u0027journal_mode = WAL\u0027);",
+                                        "audit\\veradmin-step7-audit.md:117: - audit\\veradmin-step7-audit.md:113: - audit\\veradmin-step7-audit.md:107: - db\\fixtures\\fleets\\demoFleet.ts:518: message: \u0027Terminal account example for evaluator and timeline work.\u0027,",
+                                        "audit\\veradmin-step7-audit.md:118: - audit\\veradmin-step7-audit.md:114: - audit\\veradmin-step7-audit.md:108: - docs\\01-product-doctrine.md:14: It exists so that every future decision about features, interface, architecture, copy, workflow, logic, testing, or release quality can be judged against a single standard. Veradmin must not drift into being \"just another dashboard,\" \"just another trading journal,\" or \"just another nice-looking desktop shell.\" It is being built as a tactical operating system for managing a fleet of prop-firm trading accounts.",
+                                        "audit\\veradmin-step7-audit.md:119: - audit\\veradmin-step7-audit.md:115: - audit\\veradmin-step7-audit.md:109: - docs\\01-product-doctrine.md:26: It is not primarily a journal.",
+                                        "audit\\veradmin-step7-audit.md:120: - audit\\veradmin-step7-audit.md:116: - audit\\veradmin-step7-audit.md:110: - docs\\01-product-doctrine.md:197: A journal that records mistakes is useful.",
+                                        "audit\\veradmin-step7-audit.md:121: - audit\\veradmin-step7-audit.md:117: - audit\\veradmin-step7-audit.md:111: - docs\\01-product-doctrine.md:261: ### Veradmin is not a generic journaling app",
+                                        "audit\\veradmin-step7-audit.md:122: - audit\\veradmin-step7-audit.md:118: - audit\\veradmin-step7-audit.md:112: - docs\\01-product-doctrine.md:263: Trade journaling is part of the system, but only as one layer of operational memory.",
+                                        "audit\\veradmin-step7-audit.md:123: - audit\\veradmin-step7-audit.md:119: - audit\\veradmin-step7-audit.md:113: - docs\\02-mvp-scope.md:234: - payout received,"
+                                    ]
+                   }
+               ],
+    "Totals":  {
+                   "Pass":  8,
+                   "Warn":  0,
+                   "Fail":  0
+               }
+}
