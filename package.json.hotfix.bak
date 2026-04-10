@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "veradmin",
     "private":  true,
     "version":  "0.1.0",
@@ -15,14 +15,12 @@
                     "db:migrate":  "tsx ./scripts/db/migrate.ts",
                     "db:seed:demo":  "tsx ./scripts/db/seed-demo.ts",
                     "db:seed:edge":  "tsx ./scripts/db/seed-edge.ts",
-                    "db:seed:onboarding":  "tsx ./scripts/db/seed-onboarding.ts",
-                    "step11:verify":  "powershell -ExecutionPolicy Bypass -File ./scripts/step11/verify-step11.ps1",
                     "dev:reset":  "bash ./scripts/reset-local-dev.sh",
                     "build:web":  "next build",
                     "build:desktop":  "cd src-tauri \u0026\u0026 tauri build",
                     "tree":  "bash ./scripts/print-repo-tree.sh",
-                    "step11:routes":  "powershell -ExecutionPolicy Bypass -File ./scripts/step11/route-smoke.ps1",
-                    "step11:readiness":  "powershell -ExecutionPolicy Bypass -File ./scripts/step11/release-readiness.ps1"
+                    "db:seed:onboarding":  "tsx ./scripts/db/seed-onboarding.ts",
+                    "step11:verify":  "powershell -ExecutionPolicy Bypass -File ./scripts/step11/verify-step11.ps1"
                 },
     "dependencies":  {
                          "better-sqlite3":  "12.8.0",
