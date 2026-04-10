@@ -3,11 +3,6 @@ import Link from "next/link";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/journal", label: "Journal" },
-  { href: "/alerts", label: "Alerts" },
-  { href: "/payouts", label: "Payouts" },
-  { href: "/calendar", label: "Calendar" },
-  { href: "/accounts", label: "Accounts" },
   { href: "/settings", label: "Settings" },
   { href: "/backups", label: "Backups" }
 ];
@@ -70,8 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   color: "#cbd5e1",
                 }}
               >
-                Recovered tactical routes are shown when their source files exist.
-                Settings and Backups remain the administrative continuity layer.
+                Administrative and tactical fleet operations.
               </div>
             </div>
 
@@ -98,6 +92,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </Link>
               ))}
             </nav>
+
+            <div
+              style={{
+                marginTop: 24,
+                paddingTop: 16,
+                borderTop: "1px solid rgba(148,163,184,0.16)",
+                fontSize: 12,
+                lineHeight: 1.5,
+                color: "#94a3b8",
+              }}
+            >
+              Settings and Backups stay separated from tactical surfaces and remain
+              available from the root shell.
+            </div>
           </aside>
 
           <main
