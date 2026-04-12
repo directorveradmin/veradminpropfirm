@@ -1,0 +1,123 @@
+{
+  "accounts": [
+    {
+      "id": "A1",
+      "name": "Account Alpha",
+      "mode": "attack",
+      "status": "tradable",
+      "lives": 3,
+      "payoutReady": false,
+      "firm": "Firm One",
+      "stage": "Funded",
+      "note": "Healthy posture with room to trade."
+    },
+    {
+      "id": "B1",
+      "name": "Account Beta",
+      "mode": "preservation",
+      "status": "restricted",
+      "lives": 1,
+      "payoutReady": true,
+      "firm": "Firm Two",
+      "stage": "Funded",
+      "note": "Protective posture. Prioritize payout discipline."
+    },
+    {
+      "id": "C1",
+      "name": "Account Gamma",
+      "mode": "cooldown",
+      "status": "stopped",
+      "lives": 0,
+      "payoutReady": false,
+      "firm": "Firm Three",
+      "stage": "Evaluation",
+      "note": "Stopped state. Review before any future action."
+    }
+  ],
+  "journal": [
+    {
+      "id": "J1",
+      "accountId": "A1",
+      "title": "London breakout review",
+      "outcome": "win",
+      "session": "London",
+      "summary": "Clean continuation entry with controlled size and calm execution.",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "J2",
+      "accountId": "B1",
+      "title": "Protection note",
+      "outcome": "note",
+      "session": "New York",
+      "summary": "Account kept in preservation posture due to payout proximity.",
+      "createdAt": "2026-04-09"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "AL1",
+      "severity": "high",
+      "category": "risk",
+      "title": "Beta is in a protection-sensitive state",
+      "detail": "Restricted posture with only one life remaining.",
+      "accountId": "B1"
+    },
+    {
+      "id": "AL2",
+      "severity": "critical",
+      "category": "state",
+      "title": "Gamma is stopped",
+      "detail": "No further trading should be attempted until reviewed.",
+      "accountId": "C1"
+    }
+  ],
+  "payouts": [
+    {
+      "id": "P1",
+      "accountId": "B1",
+      "amount": 1200,
+      "status": "ready",
+      "note": "Eligible to request under current posture."
+    },
+    {
+      "id": "P2",
+      "accountId": "A1",
+      "amount": 600,
+      "status": "requested",
+      "note": "Awaiting confirmation."
+    }
+  ],
+  "calendar": [
+    {
+      "id": "CAL1",
+      "title": "Weekly review",
+      "date": "2026-04-12",
+      "category": "review",
+      "note": "Review state shifts, payout rhythm, and alert burden."
+    },
+    {
+      "id": "CAL2",
+      "title": "Payout request window",
+      "date": "2026-04-13",
+      "category": "payout",
+      "note": "Beta is the main candidate."
+    }
+  ],
+  "backups": [
+    {
+      "id": "BKP1",
+      "label": "Manual backup",
+      "timestamp": "2026-04-10 08:15",
+      "status": "completed",
+      "note": "Local continuity snapshot completed successfully."
+    },
+    {
+      "id": "BKP2",
+      "label": "Export review",
+      "timestamp": "2026-04-09 18:20",
+      "status": "warning",
+      "note": "Review export scope before external sharing."
+    }
+  ]
+}

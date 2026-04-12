@@ -16,10 +16,14 @@
                     "db:seed:demo":  "tsx ./scripts/db/seed-demo.ts",
                     "db:seed:edge":  "tsx ./scripts/db/seed-edge.ts",
                     "dev:reset":  "bash ./scripts/reset-local-dev.sh",
-                    "build:web":  "next build",
+                    "build:web":  "next build --webpack",
                     "build:desktop":  "cd src-tauri \u0026\u0026 tauri build",
                     "tree":  "bash ./scripts/print-repo-tree.sh",
-                    "step12:verify":  "powershell -ExecutionPolicy Bypass -File .\\scripts\\step12\\verify-step12.ps1 -RepoRoot ."
+                    "step12:verify":  "powershell -ExecutionPolicy Bypass -File .\\scripts\\step12\\verify-step12.ps1 -RepoRoot .",
+                    "start:web:standalone":  "node .next/standalone/server.js",
+                    "verify:standalone":  "powershell -ExecutionPolicy Bypass -File .\\scripts\\step13\\verify-standalone-server.ps1 -RepoRoot .",
+                    "prepare:windows-sidecar":  "powershell -ExecutionPolicy Bypass -File .\\scripts\\step13\\prepare-windows-node-sidecar.ps1 -RepoRoot .",
+                    "verify:windows-sidecar":  "powershell -ExecutionPolicy Bypass -File .\\scripts\\step13\\verify-windows-node-sidecar.ps1 -RepoRoot ."
                 },
     "dependencies":  {
                          "better-sqlite3":  "12.8.0",
@@ -36,6 +40,7 @@
                             "@types/react-dom":  "19.2.3",
                             "drizzle-kit":  "0.31.10",
                             "tsx":  "4.21.0",
-                            "typescript":  "6.0.2"
+                            "typescript":  "6.0.2",
+                            "vitest":  "4.1.4"
                         }
 }

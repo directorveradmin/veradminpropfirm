@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
 import {
-  appendJournalEntry,
   getAccountById,
   getAlerts,
   getJournalEntries,
   getPayouts,
-  updateAccountById,
+  updateAccountAndMaybeAppendJournalById,
+  type MutationFailure,
 } from "@/lib/server/workspaceStore";
 
 export const runtime = "nodejs";
 
 function buildPayload(id: string) {
   const account = getAccountById(id);
+
   return {
     account,
     alerts: getAlerts().filter((item) => item.accountId === id),
@@ -20,15 +21,31 @@ function buildPayload(id: string) {
   };
 }
 
+function toErrorResponse(result: MutationFailure) {
+  const status =
+    result.kind === "not_found" ? 404 : result.kind === "validation" ? 400 : 500;
+
+  return NextResponse.json(
+    {
+      error: result.message,
+      fieldErrors: result.fieldErrors ?? null,
+      stateUnchanged: result.stateUnchanged,
+    },
+    { status }
+  );
+}
+
 export async function GET(
   _request: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
   const payload = buildPayload(id);
+
   if (!payload.account) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
+
   return NextResponse.json(payload);
 }
 
@@ -39,28 +56,20 @@ export async function PATCH(
   const { id } = await context.params;
   const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;
 
-  const patch: Record<string, unknown> = {};
+  const result = updateAccountAndMaybeAppendJournalById(
+    id,
+    {
+      mode: body.mode as never,
+      status: body.status as never,
+      lives: body.lives as never,
+      payoutReady: body.payoutReady as never,
+      note: body.note as never,
+    },
+    body.journalNote
+  );
 
-  if (typeof body.mode === "string") patch.mode = body.mode;
-  if (typeof body.status === "string") patch.status = body.status;
-  if (typeof body.lives === "number") patch.lives = body.lives;
-  if (typeof body.payoutReady === "boolean") patch.payoutReady = body.payoutReady;
-  if (typeof body.note === "string") patch.note = body.note;
-
-  const updated = updateAccountById(id, patch);
-  if (!updated) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
-  }
-
-  if (typeof body.journalNote === "string" && body.journalNote.trim().length > 0) {
-    appendJournalEntry({
-      accountId: id,
-      title: "Quick account note",
-      outcome: "note",
-      session: "Operator",
-      summary: body.journalNote.trim(),
-      createdAt: new Date().toISOString().slice(0, 10),
-    });
+  if (!result.ok) {
+    return toErrorResponse(result);
   }
 
   return NextResponse.json(buildPayload(id));

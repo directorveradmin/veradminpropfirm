@@ -1,22 +1,35 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Veradmin",
-  "version": "0.1.0",
-  "identifier": "com.veradmin.desktop",
-  "build": {
-    "beforeDevCommand": "pnpm dev:web",
-    "beforeBuildCommand": "pnpm build:web",
-    "devUrl": "http://localhost:3000",
-    "frontendDist": "../out"
-  },
-  "app": {
-    "windows": [
-      {
-        "title": "Veradmin",
-        "width": 1440,
-        "height": 960,
-        "resizable": true
-      }
-    ]
-  }
+    "$schema":  "../node_modules/@tauri-apps/cli/config.schema.json",
+    "productName":  "Veradmin",
+    "version":  "0.1.0",
+    "identifier":  "com.veradmin.desktop",
+    "build":  {
+                  "beforeDevCommand":  "powershell -ExecutionPolicy Bypass -Command \"$root=(Get-Location).Path; while($root -and -not (Test-Path (Join-Path $root \u0027package.json\u0027))){ $parent=Split-Path $root -Parent; if($parent -eq $root){$root=$null}else{$root=$parent} }; if(-not $root){ throw \u0027repo root not found\u0027 }; pnpm --dir $root dev:web\"",
+                  "beforeBuildCommand":  "powershell -ExecutionPolicy Bypass -Command \"$root=(Get-Location).Path; while($root -and -not (Test-Path (Join-Path $root \u0027package.json\u0027))){ $parent=Split-Path $root -Parent; if($parent -eq $root){$root=$null}else{$root=$parent} }; if(-not $root){ throw \u0027repo root not found\u0027 }; pnpm --dir $root build:web; powershell -ExecutionPolicy Bypass -File (Join-Path $root \u0027scripts\\step13\\prepare-windows-node-sidecar.ps1\u0027) -RepoRoot $root\"",
+                  "devUrl":  "http://localhost:3000",
+                  "frontendDist":  "../desktop-bootstrap"
+              },
+    "app":  {
+                "windows":  [
+                                {
+                                    "title":  "Veradmin",
+                                    "width":  1440,
+                                    "height":  960,
+                                    "resizable":  true,
+                                    "label":  "main"
+                                }
+                            ]
+            },
+    "bundle":  {
+                   "externalBin":  [
+                                       "binaries/veradmin-node"
+                                   ],
+                   "resources":  [
+                                     "resources/server/",
+                                     "resources/server-launcher.cjs"
+                                 ],
+                   "active":  true,
+                   "targets":  "nsis",
+                   "useLocalToolsDir":  true
+               }
 }

@@ -1,22 +1,19 @@
-# File: src-tauri/Cargo.toml
-
 [package]
 name = "veradmin-desktop"
 version = "0.1.0"
 edition = "2021"
-authors = ["Veradmin Team <you@example.com>"]
-description = "Step 2 scaffold: Veradmin desktop shell"
+authors = ["Veradmin Team"]
+description = "Veradmin desktop shell"
 license = "MIT"
 
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
 [dependencies]
-# Pin Tauri to 2.10.3 to avoid version selection issues
 tauri = { version = "=2.10.3", features = [] }
+tauri-plugin-shell = "2"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-
-[build-dependencies]
-# Optional build dependencies placeholder
-tauri-build = { version = "2", features = [] }
 
 [profile.dev]
 opt-level = 0
