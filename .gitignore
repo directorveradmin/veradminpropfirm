@@ -26,6 +26,19 @@ src-tauri/target/
 # -------------------------------
 .env.local
 .veradmin-dev/
+.env
+coverage/
+artifacts/
+_phase1_backups/
+_phase1_logs/
+
+VERADMIN_*.md
+Full_Project_Context.md
+Project_Audit_Report.txt
+
+combined_code.txt
+project_map.txt
+rust_tauri_code.txt
 
 # -------------------------------
 # OS / IDE files
