@@ -39,6 +39,8 @@ Project_Audit_Report.txt
 combined_code.txt
 project_map.txt
 rust_tauri_code.txt
+scaffold-step13-completion/
+src/app/api/accounts/logs/
 
 # -------------------------------
 # OS / IDE files
