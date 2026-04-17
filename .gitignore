@@ -34,3 +34,36 @@ src-tauri/target/
 Thumbs.db
 .vscode/
 .idea/
+# ENV
+.env
+
+# Next
+.next/
+
+# Build
+dist/
+out/
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+
+# Backups
+_phase1_backups/
+_phase1_logs/
+artifacts/
+
+# Temp / exports
+*.md
+combined_code.txt
+project_map.txt
+rust_tauri_code.txt
+
+# Tauri build
+src-tauri/target/
+src-tauri/gen/
+Project_Audit_Report.txt
+scaffold-step13-completion/
